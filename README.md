@@ -3,7 +3,7 @@
 ## Github Basics
 
 * Creating repositories
-* Pusing code
+* Pushing code
 * Vim Basics
 * Working with multiple programmers
 * Merge conflicts
