@@ -1,6 +1,6 @@
 # The Digital Eagles Programming Course Plan
 
-## Github Basics
+## [Github Basics](/01_Github-Basics)
 
 * Creating repositories
 * Pushing code
