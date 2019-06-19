@@ -8,7 +8,7 @@
 * Working with multiple programmers
 * Merge conflicts
 
-## Java Programming 101
+## [Java Programming 101](02_Java-Programming-101)
 
 * Data types
 * If/else statements
@@ -16,7 +16,7 @@
 * Classes
 * OOP 101
 
-## Command Based Programming 101
+## [Command Based Programming 101](03_Command-Based-Programming-101)
 
 * Robot.java
 * RobotMap.java
@@ -24,7 +24,7 @@
 * Subsystems
 * Commands
 
-## WPI Lib Programming 101
+## [WPI Lib Programming 101](04_WPILib-Programming-101)
 
 * Drive Trains
 * Motors
@@ -35,14 +35,14 @@
 * Network Tables
 * Shuffleboard and SmartDashboard
 
-## Vision
+## [Vision](05_Vision)
 
 * USB Cameras
 * OpenCV
 * Modifiying and manipulating the camera feed
 * LimeLight functionality
 
-## PID Basics
+## [PID Basics](06_PID-Basics)
 
 * Proportional
 * Integral
@@ -50,7 +50,7 @@
 * Feed Forward
 * Implementing PIDF into subsystems
 
-## Unit Testing
+## [Unit Testing](07_Unit-Testing)
 
 * JUnit Testing
 * Mockito
