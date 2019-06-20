@@ -1,20 +1,21 @@
 # Github Basics
 
 ## Creating repositiories
-- [ ] `git init`
-- [ ] Create repository with GitHub account
-- [ ] `git remote add origin (GitHub repository url)`
+- [X] `git init`
+- [X] Create repository with GitHub account
+- [X] `git remote add origin (GitHub repository url)`
 
 ## Pushing Code
-- [ ] `git add .`
-- [ ] `git commit -m "message`
-- [ ] `git push origin master`
-- [ ] Sign in using GitHub account
+- [X] `git status` Check the status of the repo
+- [X] `git add .`
+- [X] `git commit -m "message`
+- [X] `git push origin master`
+- [X] Sign in using GitHub account
 
 ## Vim Basics
-- [ ] `esc ":q!"`
-- [ ] `esc ":wq"`
-- [ ] `esc "i"`
+- [X] `esc ":q!"`
+- [X] `esc ":wq"`
+- [X] `esc "i"`
 
 ## Working with Multiple Programmers
 - [ ] Constantly commit code!
