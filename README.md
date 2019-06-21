@@ -1,14 +1,31 @@
 # The Digital Eagles Programming Course Plan
 
-## [Github Basics](/01_Github-Basics)
+## [Setting Up Your Environment](00_Installation)
+
+* Install Visual Studio Code
+* Download WPILib & FRC tools
+* Download & getting Git
+* Install WPILib & Java Extension Pack in Visual Studio Code
+* Set indentations to tabs (4 spaces)
+* Turn on auto-format when saving & pasting
+
+## [GitHub Basics](01_Github-Basics)
 
 * Creating repositories
-* Pushing code
-* Vim Basics
+* Stage, commit, and push code
+* VIM basics
 * Working with multiple programmers
 * Merge conflicts
+* Cloning repositories
 
-## [Java Programming 101](02_Java-Programming-101)
+## [Visual Studio Code Basics](02_VSCode-Basics)
+
+* How to access command palette
+* How to create a new robot project
+* How to build a robot project
+* How to deploy a robot project
+
+## [Java Programming 101](03_Java-Programming-101)
 
 * Data types
 * If/else statements
@@ -16,16 +33,22 @@
 * Classes
 * OOP 101
 
-## [Command Based Programming 101](03_Command-Based-Programming-101)
+## [Command Based Programming 101](04_Command-Based-Programming-101)
 
-* Robot.java
-* RobotMap.java
-* OI.java
-* Subsystems
-* Commands
+* Project/Robot Structure
+  * Robot.java
+  * RobotMap.java
+  * OI.java
+  * Subsystems
+    * PID Subsystem vs Custom PID Subsystem
+  * Commands
+    * Command Groups
+    * Instant Commands
+    * Timed Commands
 
-## [WPI Lib Programming 101](04_WPILib-Programming-101)
+## [WPI Lib Programming 101](05_WPILib-Programming-101)
 
+* FMS -> Driver Station -> Radio -> RIO Communication
 * Drive Trains
 * Motors
 * Pneumatics
@@ -35,14 +58,14 @@
 * Network Tables
 * Shuffleboard and SmartDashboard
 
-## [Vision](05_Vision)
+## [Vision Basics](06_Vision-Basics)
 
 * USB Cameras
 * OpenCV
 * Modifiying and manipulating the camera feed
 * LimeLight functionality
 
-## [PID Basics](06_PID-Basics)
+## [PID Basics](07_PID-Basics)
 
 * Proportional
 * Integral
@@ -50,8 +73,18 @@
 * Feed Forward
 * Implementing PIDF into subsystems
 
-## [Unit Testing](07_Unit-Testing)
+## [Unit Testing Basics](08_Unit-Testing-Basics)
 
 * JUnit Testing
 * Mockito
 * Factories
+
+## [Standard Practices](09_Standard-Practices)
+
+* Formatting
+* Variable Naming
+* Method Naming
+* Subsystem & Commands Naming
+* Documentation
+* Best tool for the job (time based actions vs feedback loops (closed loops vs open loops) )
+* PIDF Tuning
