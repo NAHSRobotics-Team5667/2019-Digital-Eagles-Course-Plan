@@ -63,3 +63,12 @@ When working on the same repository with multiple programmers it is important to
 ## Cloning Repositories
 
 Cloning a repostiory allows you to "copy" the public repository locally. This will allow you to create your own changes and then eventually push them as well.
+
+## Branches
+
+* `git branch` - Get the branch you are currently in.
+* `git checkout (branch name)` - Creates the branch if it has not yet been created. If the branch already exists, it will switch you into that branch. You can use the `-b` shortcut to automatically switch into the branch after creating it. `git checkout -b (branch name)` creates a branch and automatically switches you into it.
+* `git branch -D (branch name)` - Deletes branch
+* `git branch -m (old branch name) (new branch name)` - Renames a branch
+* `git push origin (branch name)` - Pushes code to branch. Master being the main branch
+* `git merge origin/(branch name)` - Merges two branches together

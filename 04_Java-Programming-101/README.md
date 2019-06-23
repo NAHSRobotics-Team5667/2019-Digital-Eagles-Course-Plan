@@ -1,7 +1,5 @@
 # Java Programming 101
 
-OOP Before Java
-
 ## Data Types
 
 * `String varName = "A string is enclosed with quotes";`
@@ -61,13 +59,4 @@ if(condition) { // Conditions must evaluate to an expression
 * `this dot`
 * Scopes
   * Difference between object references & local references
-
-## OOP 101
-
-* Everything that you can imagine as an object should be a class
-* If something has an attribute is should be a variable
-* Any actions or behavior should be represented using functions
-* Good naming conventions/practices -.- no (`c++`)
-* Organizing code structure
-* Documenting classes using Java Docs
-
+  

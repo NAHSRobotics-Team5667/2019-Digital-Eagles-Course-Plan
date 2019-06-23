@@ -25,7 +25,14 @@
 * How to build a robot project
 * How to deploy a robot project
 
-## [Java Programming 101](03_Java-Programming-101)
+## [Object Oriented Programming 101](03_OOP-101)
+
+* What are objects? How are they used in Java?
+* How can we efficiently use objects?
+* Objects vs methods
+* What goes in objects?
+
+## [Java Programming 101](04_Java-Programming-101)
 
 * Data types
 * If/else statements
@@ -33,7 +40,7 @@
 * Classes
 * OOP 101
 
-## [Command Based Programming 101](04_Command-Based-Programming-101)
+## [Command Based Programming 101](05_Command-Based-Programming-101)
 
 * Project/Robot Structure
   * Robot.java
@@ -46,7 +53,7 @@
     * Instant Commands
     * Timed Commands
 
-## [WPI Lib Programming 101](05_WPILib-Programming-101)
+## [WPI Lib Programming 101](06_WPILib-Programming-101)
 
 * FMS -> Driver Station -> Radio -> RIO Communication
 * Drive Trains
@@ -58,14 +65,14 @@
 * Network Tables
 * Shuffleboard and SmartDashboard
 
-## [Vision Basics](06_Vision-Basics)
+## [Vision Basics](07_Vision-Basics)
 
 * USB Cameras
 * OpenCV
 * Modifiying and manipulating the camera feed
 * LimeLight functionality
 
-## [PID Basics](07_PID-Basics)
+## [PID Basics](08_PID-Basics)
 
 * Proportional
 * Integral
@@ -73,13 +80,13 @@
 * Feed Forward
 * Implementing PIDF into subsystems
 
-## [Unit Testing Basics](08_Unit-Testing-Basics)
+## [Unit Testing Basics](09_Unit-Testing-Basics)
 
 * JUnit Testing
 * Mockito
 * Factories
 
-## [Standard Practices](09_Standard-Practices)
+## [Standard Practices](10_Standard-Practices)
 
 * Formatting
 * Variable Naming
