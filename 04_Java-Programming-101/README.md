@@ -79,7 +79,7 @@ public int add (int num1, int num2){
 ```
 
 We clearly want the function to return an interger (`sum`), so we specify that before the method name `public int (<-- That is the return type) add(int num1, int num2)`. You can return any type you want as long as you specify it, but what if you don't want your method to return something. You can then specify `void` as the return type and Java will not complain.
- 
+
 ### Visibility options
 
 When creating methods we sometimes want our methods to be accessible in other classes. We can access our methods/data by providing visibility keywords.
