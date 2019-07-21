@@ -55,7 +55,7 @@
 
 ## [WPI Lib Programming 101](06_WPILib-Programming-101)
 
-* FMS -> Driver Station -> Radio -> RIO Communication
+* Field Connections
 * Drive Trains
 * Motors
 * Pneumatics
