@@ -15,27 +15,27 @@ All of the information provided was taken from and can be found [here](https://f
 * `MecanumDrive` - A class for driving Mecanum drive platforms. ([example](https://github.com/NAHSRobotics-Team5667/FRC_2019/blob/master/src/main/java/frc/robot/subsystems/drivetrain/MecanumDriveSubsystem.java))
 * `Vector2d` - This is a 2D vector struct that supports basic vector operations.
 
-The WPI Library provides various `drive` classes for the popular drive train mechanism used throughout the FRC Community. All of these classes require you to pass `SpeedControllers` when instantiating. For example, a Tank Drive would look like this:
+The WPI Library provides various `drive` classes for the popular drive train mechanism used throughout the FRC Community. Most of these classes require you to pass `SpeedControllers` when instantiating. For example, a Tank Drive would look like this:
 
 ```java
-Spark m_frontLeft = new Spark(1);
-Spark m_rearLeft = new Spark(2);
-SpeedControllerGroup m_left = new SpeedControllerGroup(m_frontLeft, m_rearLeft);
+Spark m_frontLeft = new Spark(1); // This is a Speed Controller
+Spark m_rearLeft = new Spark(2); // This is a Speed Controller
+SpeedControllerGroup m_left = new SpeedControllerGroup(m_frontLeft, m_rearLeft); // Speed Controller group to manipulate both Speed Controllers at the same time
 
-Spark m_frontRight = new Spark(3);
-Spark m_rearRight = new Spark(4);
-SpeedControllerGroup m_right = new SpeedControllerGroup(m_frontRight, m_rearRight);
+Spark m_frontRight = new Spark(3); // This is a Speed Controller
+Spark m_rearRight = new Spark(4); // This is a Speed Controller
+SpeedControllerGroup m_right = new SpeedControllerGroup(m_frontRight, m_rearRight); // Speed Controller group to manipulate both Speed Controllers at the same time
 
 DifferentialDrive m_drive = new DifferentialDrive(m_left, m_right);
 ```
 
 The most common methods that you will use in any of these classes will be its respective `drive` method, which may be `ArcadeDrive()`, `driveCartesian()`, or what ever method of driving you decide to use.
 
-Another common method that you will use when dealing with drive trains is the `stopMotor()` method that is inherited from the `RobotDriveBase` class. We always want the Drive Train command to be scheduled immediately, so setting the `DriveTrainCommand` as the default command in the DriveTrainSubsystem would be appropriate.
+Another common method that you will use when dealing with drive trains is the `stopMotor()` method that is inherited from the `RobotDriveBase` class. We always want the Drive Train command to be scheduled immediately, so setting the `DriveTrainCommand` as the default command in the `DriveTrainSubsystem` would be appropriate.
 
 ## Package edu.wpi.first.wpilibj
 
-### Motors
+### Motor Controllers (Speed Controllers)
 
 * `DMC60` - Digilent DMC 60 Speed Controller.
 * `Jaguar` - Texas Instruments / Vex Robotics Jaguar Speed Controller as a PWM device.
@@ -79,7 +79,9 @@ This year we used the default RedLine Encoders which has a CPR value of 1024 CPR
 
 * `Ultrasonic` - Ultrasonic rangefinder class.
 
-### Limit switches
+Typically we want to stray away from using Ultrasonic sensors because of their inaccurate and false readings. They are bad at detecting far away objects as well as detecting close objects. Ultrasonic sensors excel at detecting and measuring objects from a medium distance, which is incredibly limiting for FRC. Because the Ultrasonic sensor can be inaccurate, you should never make autonomous functionality completely dependent on an Ultrasonic sensor without proper testing first!
+
+### Limit Switches
 
 * `DigitalInput` - Class to read a digital input.
 
