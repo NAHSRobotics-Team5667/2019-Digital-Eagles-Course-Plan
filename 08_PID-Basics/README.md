@@ -79,9 +79,9 @@ Take a look at this graph:
 
 ![PID Graph](IdealPID.gif)
 
-By looking at this graph we can see 3 states that our PID Controller can possibly be in. An overdamped state, underdamped state, or critically damped state.
+By looking at this graph we can see 3 states that our PID Controller can be in. An overdamped state, underdamped state, or critically damped state.
 
-* Overdamped - The gains are too strong causing the PID curve too long to reach the target. This means that we are apply output for logner periods of time and overall just slow.
+* Overdamped - The gains are too strong causing the PID curve too long to reach the target. This means that we are apply output for longer periods of time and overall just slow.
 * Underdamped - The gains are too low causing the PID curve to overshoot the target and potentially oscillate.
 * Critically damped - The gains cause the PID curve to take longer than desired to reach the target but ultimately has low to no oscillations.
 
@@ -99,3 +99,5 @@ A critically damped PID loop might not be such a bad thing if you don't mind the
 A properly tuned PID loop should look something like this:
 
 ![Good PID Loop Graph](GoodPID.jpg)
+
+We should have immediate response to the target, a slight overshoot due to the immediate response and momentum, and then an adjustment to fix that overshoot. This PID loop is fast, accurate, and efficient and ideally what we should aim for.
