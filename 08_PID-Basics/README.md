@@ -2,12 +2,12 @@
 
 In order to understand PID Controllers we must understand what "Open" and "Closed" control loops are -
 
-* Open Control Loop - Runs freely without any sort of feed back (non-feedback system) and acts soley on input. An example of an open loop would be a light switch. When switched on - the lightbulb is receiving constant voltage regardless of anything. When off the opposite is true.
+* Open Control Loop - Runs freely without any sort of feed back (non-feedback system) and acts solely on input. An example of an open loop would be a light switch. When switched on - the light bulb is receiving constant voltage regardless of anything. When off the opposite is true.
 * Closed Control Loop - Runs on a feedback system. An example of a Closed Control Loop would be your A/C when set to auto. Your A/C turns on when it gets too hot and turns off when it gets too cold. The feedback here being the current temperature.
 
 With that, PID Controllers are a form of closed loop controllers. They require some sort of feedback in order to operate. A PID Controller has 3 main parts to it - A proportional, integral, and derivative. By using all 3 of these mathematical components, we can properly create a smooth form of mechanism behavior. Let's use an elevator for this example. When you ride an elevator it always starts off slow and speeds up half way into the ride. At approximately 3/4ths of the ride the elevator beings to slow down so that it reaches its target floor not only smoothly but also accurately. That is essentially what PID does. It allows our mechanisms to not only behave smoothly, but also accurately.
 
-With PID we always have gain constants for each factor denotated like so: `kP, kI, kD`. These constants will help us calculate the ultimate output that we would like to provide.
+With PID we always have gain constants for each factor denoted like so: `kP, kI, kD`. These constants will help us calculate the ultimate output that we would like to provide.
 
 The final PID formula looks something like this -
 
@@ -25,7 +25,7 @@ Looking at this image we can see that the mechanism is stuck in a never ending o
 
 ## Integral
 
-Ideally when it comes to FRC, we want to stray away from I when we are creating our PID Controllers. The reason for this is because how inacurrate they actually make the mechanism after some time; however, we will discuss that in the next couple of paragraphs. By introducing the I to the controller we now have what is called a PI Controller. The integral is total error multiplied by the `kI` gain. Mathematically, it looks like this:
+Ideally when it comes to FRC, we want to stray away from I when we are creating our PID Controllers. The reason for this is because how inaccurate they actually make the mechanism after some time; however, we will discuss that in the next couple of paragraphs. By introducing the I to the controller we now have what is called a PI Controller. The integral is total error multiplied by the `kI` gain. Mathematically, it looks like this:
 
 `(kI × ∑ error)`
 
@@ -40,11 +40,11 @@ public void calculateI(){
 }
 ```
 
-Makes more sense like that in my opinion - Can you see why having an I can be a bad thing? The fact that the I portion is calculated using the total error over time means that the total error will continuosly get bigger over time. This means that the I portion of the PID Output will get biggger over time making the output larger and larger as time increases. There are ways to combat this such as resetting the total error after a certain point or capping it at a certain value, but having an I overall makes tuning your PID Controller and getting consistent results a - bleep -. That is why we should stray away from using the I part of a PID Controller unless we absolutely have to. Instead, we should try to implement the D portion of the controller first.
+Makes more sense like that in my opinion - Can you see why having an I can be a bad thing? The fact that the I portion is calculated using the total error over time means that the total error will continuously get bigger over time. This means that the I portion of the PID Output will get bigger over time making the output larger and larger as time increases. There are ways to combat this such as resetting the total error after a certain point or capping it at a certain value, but having an I overall makes tuning your PID Controller and getting consistent results a - bleep -. That is why we should stray away from using the I part of a PID Controller unless we absolutely have to. Instead, we should try to implement the D portion of the controller first.
 
 ## Derivative
 
-A PD Controller typically solves the oscillation problem that comes with just a P Controller if properly tuned. It can also solve any steady state errors, which pratically provides the output with the final nudge needed to reach the target. If you've taken calculus you know that the derivative is basically a way to show the rate of change. Mathematically, the D portion of the controller looks like this:
+A PD Controller typically solves the oscillation problem that comes with just a P Controller if properly tuned. It can also solve any steady state errors, which practically provides the output with the final nudge needed to reach the target. If you've taken calculus you know that the derivative is basically a way to show the rate of change. Mathematically, the D portion of the controller looks like this:
 
 `(kD × δerror / δt)`
 
@@ -59,13 +59,13 @@ public void calculateD(){
 }
 ```
 
-Notice that programmatically we do not need to divide by delta time. The reason for this is because commands are runned so fast that ultimately the delta time is really close to 1, thus not changing our values. However, if you would like really precise values, you may find some way to calculate the delta time.
+Notice that programmatically we do not need to divide by delta time. If you would like really precise values, you may want to find some way to calculate the delta time.
 
 A majority of PID Subsystems will function just fine with just a PD Controller, however, there is one last improvement we can make: implementing a feed forward portion if necessary.
 
 ## Feed Forward
 
-When using PID Controllers we typically want a Feed Forward value implmented to combant any guaranteed/predicted "friction". For example, for an elevator, the mechanism will consistently receive some sort of force applied by gravity. We would implement a feed forward value that counter-acts gravity here in order to combat this and get smoother results. For example, a robot elevator trying to get to a certain level will apply a certain amount of power to get to a certain position based on error. Now lets say that the elevator is traveling the same error downwards. This time, the elevator has gravity working with it meaning that the elevator will be faster, thus potentially making it harder to reach the target. A feed forward value not only gets rid of the force of gravity when traveling up, but also down. That is the ultimate goal you want your feedforward value to combat. Our equation now looks like this:
+When using PID Controllers we typically want a Feed Forward value implemented to combat any guaranteed/predicted "friction". For example, for an elevator, the mechanism will consistently receive some sort of force applied by gravity. We would implement a feed forward value that counter-acts gravity here in order to combat this and get smoother results. For example, a robot elevator trying to get to a certain level will apply a certain amount of power to get to a certain position based on error. Now lets say that the elevator is traveling the same error downwards. This time, the elevator has gravity working with it meaning that the elevator will be faster, thus potentially making it harder to reach the target. A feed forward value not only gets rid of the force of gravity when traveling up, but also down. That is the ultimate goal you want your feed forward value to combat. Our equation now looks like this:
 
 `output = feedforward + (kP × error) + (kI × ∑error) + (kD × δerror / δt)`
 

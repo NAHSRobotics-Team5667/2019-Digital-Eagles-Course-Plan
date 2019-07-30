@@ -68,8 +68,8 @@ A single valve solenoid is the simplest solenoid you can have. Similarly to the 
 
 When dealing with encoders it is very important that you know what encoder you are dealing with. We should know what the resolution of our encoder is:
 
-* CPR - Counts per Revolution - Found often in Quadature encoders
-* PPR - Pulses per Revolution - Found often in Quadature encoders
+* CPR - Counts per Revolution - Found often in Quadrature encoders
+* PPR - Pulses per Revolution - Found often in Quadrature encoders
 * LPR - Lines per Revolution - Found often in optical encoders. Not reliable and can be inaccurate!
 
 This year we used the default RedLine Encoders which has a CPR value of 1024 CPR. This means that the encoder will count 1024 times before the shaft makes a full rotation. This assumes of course that the shaft is not geared in any way. This means that we can estimate how many times the shaft has turned based on encoder counts.
@@ -91,7 +91,7 @@ When using Limit Switches we have to use the Digital Input class. In order to ge
 
 ### Package edu.wpi.first.networktables
 
-* `NetworkTable` A network table that knows its subtable path.
+* `NetworkTable` A network table that knows its suitable path.
 * `NetworkTableEntry` - NetworkTables Entry.
 * `NetworkTableInstance` - NetworkTables Instance.
 
@@ -115,4 +115,4 @@ We want to use the Suffleboard or SmartDashboard in order to provide the driver 
 
 * `SmartDashboard` - The SmartDashboard class is the bridge between robot programs and the SmartDashboard on the laptop.
 
-Visit the [WPI Libary Reference](https://first.wpi.edu/FRC/roborio/release/docs/java/index.html) to learn see the functionality that comes with each dash board and how to use it.
+Visit the [WPI Library Reference](https://first.wpi.edu/FRC/roborio/release/docs/java/index.html) to learn see the functionality that comes with each dash board and how to use it.
