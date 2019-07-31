@@ -49,7 +49,7 @@ We can chain comparison checks using logical operators
 ### Method Syntax
 
 ```java
-(visiblity) (return type) methodName( (parameter type) (parameter name) ){
+(visibility) (return type) methodName( (parameter type) (parameter name) ){
     (return if any)
 }
 ```
@@ -94,9 +94,9 @@ We want to make things private in order to ensure that we aren't referencing it 
 Classes are the foundation to your code. All of your code must be put inside of a class in order for it to compile. The class name should be the same name as the java file. You can create a class like so:
 
 ```java
-(visiblity) class className {
-    (visiblity) className((parameter type) (parameter name)){
-        // This is a constuctor and runs immediately when the class is instantiated!
+(visibility) class className {
+    (visibility) className((parameter type) (parameter name)){
+        // This is a constructor and runs immediately when the class is instantiated!
         // The name of the "method" aka constructor must be the same name as the class!
         // Notice that we do not specify a return type because the constructor should not return anything.
     }
@@ -105,7 +105,7 @@ Classes are the foundation to your code. All of your code must be put inside of 
 
 ### this dot
 
-`this.` is one of them most imporant parts about understanding how classes/objects work. `this.` always referes to the object in which it is referencing. For example, if I have a method add in the following class:
+`this.` is one of them most important parts about understanding how classes/objects work. `this.` always refers to the object in which it is referencing. For example, if I have a method add in the following class:
 
 ```java
 public class Math{
@@ -122,7 +122,7 @@ The following method will produce an undesired result. The class value `num` wil
 
 #### Scopes
 
-This concept dives some what into what scopes are so we will briefly talk about them here. Think of Java as a lazy refrence finder. Java will always look for the first reference it can find within its scope. In a class, there are typically 3 scopes - A local scope -> A class scope -> and a global scope. Java always starts looking first in the local scope and moves its way throughout. So when we perform `num = num + num;` java only references the local scope which is defined by the `{}`. Therefore, we are only changing the parameter `num` and the class `num` will remain 0. In order to change the class num we must use `this.`:
+This concept dives some what into what scopes are so we will briefly talk about them here. Think of Java as a lazy reference finder. Java will always look for the first reference it can find within its scope. In a class, there are typically 3 scopes - A local scope -> A class scope -> and a global scope. Java always starts looking first in the local scope and moves its way throughout. So when we perform `num = num + num;` java only references the local scope which is defined by the `{}`. Therefore, we are only changing the parameter `num` and the class `num` will remain 0. In order to change the class num we must use `this.`:
 
 ```java
 public class Math{

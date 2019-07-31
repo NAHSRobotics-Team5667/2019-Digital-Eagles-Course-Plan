@@ -8,7 +8,7 @@ Before you begin the lesson:
 * Make sure you have created a dev folder and another subfolder for this assignment
 * Make sure you have created a GitHub account and have an internet connection available.
 
-## Creating repositiories
+## Creating repositories
 
 1. Login to your GitHub account and create a new repository. Name it whatever you like; however, DO NOT include a README, gitignore, or license file! After creating the repository, a screen with instructions will display that practically show you how to do what this section is about - Copy the repo link that looks something like this: https://github.com/YourUsername/YourRepositoryName.git
 2. `git init` - Creates a new local repository in the current folder you are in. (Everything in this folder will be uploaded and visible to the public on GitHub). Open Visual Studio Code and open the lesson folder you created prior to starting the lesson. Start a new terminal by clicking on `Terminal` -> `New Terminal`. Once this terminal has opened, type `git init`. You have now created a local repository. You can verify this by typing `git status`.
@@ -27,7 +27,7 @@ We have now added this file to the repository that says "Hello World", but it is
 * `git status` - Check the status of the local repository. Type this command and see what it says. "Changes not staged for commit" - What does this mean? Git is saying that it has noticed a change in the repo (we added a file) but it as not been staged yet.
 * `git add .` - Stages the entire folder. In order to stage the file we can run the following command: `git add .`. This will stage the entire folder so be careful when running this command. You can run `git status` to see what is being staged. If you do not want certain files to be staged and soon after uploaded publicly you can create a `.gitignore` file, which will be covered later.
 * `git commit -m "message"` - Commits the staged files. Now that we have staged the files we want to commit our changes to the repository. We can run the command `git commit -m "(your commit message)"`. Replace your commit message with something that describes the changes you made. For example, "created README file" or "initial commit" works fine in this situation. In the future, commit messages should be specific as to what you did. If you worked on the elevator subsystem and added 2 methods - specifically state that so any other programmers that look at what has changed can see your commit messages and see what you changed.
-* `git push origin master` - Pushes the commited code to the GitHub Repository. We can now run the command `git push origin master` to "upload" the code to the online repository. You will be prompted for your GitHub username and password. When entering your password, you will not see characters being inserted. If you mess up, spam the backspace until you think you got it all xD. WARNING: If this is your first time using git, it will automatically assume your email and name for credentials when pushing. A prompt will display what email and name it has assumed. If it is incorrect, commands will be shown on how to update and reset the author for the commit. If you do decide to do this - Please jump to the VIM Basics below as you will have to use vim to update the information. Visual Studio Code might do this for you, but I am not sure.
+* `git push origin master` - Pushes the committed code to the GitHub Repository. We can now run the command `git push origin master` to "upload" the code to the online repository. You will be prompted for your GitHub username and password. When entering your password, you will not see characters being inserted. If you mess up, spam the backspace until you think you got it all xD. WARNING: If this is your first time using git, it will automatically assume your email and name for credentials when pushing. A prompt will display what email and name it has assumed. If it is incorrect, commands will be shown on how to update and reset the author for the commit. If you do decide to do this - Please jump to the VIM Basics below as you will have to use vim to update the information. Visual Studio Code might do this for you, but I am not sure.
 * Refresh your online GitHub Repository and "Hello World" should display in a huge font!
 
 Congrats! You have now pushed your first file to a public repository! You now know how to create local repositories, link them to public repositories, and push files/code to the repository, thus making them available to the public.
@@ -58,11 +58,11 @@ When working on the same repository with multiple programmers it is important to
 ## Merge Conflicts
 
 * What are they & how to avoid them? You have tried to push old code to a newer version on the public repo. This is either because you forgot to pull or you just have terrible timing. The best way to avoid them is to pull as often as possible and ensure that you have the newest version of the repo. A merge conflict is GitHub's way of saying - You put something in this file that does not match with what I currently have - Which would you like to keep?
-* Visual Studio Code has a nice way to handle merge conflicts if you ever happen to run into them. It is a visual solution to the problem, which is incredibly handy! It will visualy display what the repo is expecting and what you currently have and present both options. You can then visually see which option you would like to keep.
+* Visual Studio Code has a nice way to handle merge conflicts if you ever happen to run into them. It is a visual solution to the problem, which is incredibly handy! It will visually display what the repo is expecting and what you currently have and present both options. You can then visually see which option you would like to keep.
 
 ## Cloning Repositories
 
-Cloning a repostiory allows you to "copy" the public repository locally. This will allow you to create your own changes and then eventually push them as well.
+Cloning a repository allows you to "copy" the public repository locally. This will allow you to create your own changes and then eventually push them as well.
 
 ## Branches
 

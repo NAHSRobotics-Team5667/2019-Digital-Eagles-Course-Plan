@@ -28,7 +28,7 @@ The explorer is the icon on the left that looks like files. When having the expl
 
 ## Creating Files
 
-To start programming you want to use the premade templates provided by the WPI Library extension. To do so, right click on the folder you would like to create the file in, select the last option `create a new class/command` and the select the appropriate class you would like to use. This will provide you with a boiler template with all of the necessary methods and functionality you will need.
+To start programming you want to use the pre-made templates provided by the WPI Library extension. To do so, right click on the folder you would like to create the file in, select the last option `create a new class/command` and the select the appropriate class you would like to use. This will provide you with a boiler template with all of the necessary methods and functionality you will need.
 
 ## Source Control
 

@@ -5,7 +5,7 @@
 1. Visit the [WPILib GitHub](https://github.com/wpilibsuite/allwpilib/releases) page and download the appropriate installer.
 2. Run the installer
 3. Download and install Visual Studio Code using the installer
-4. Download [Git](https://git-scm.com/) if you dont have it. Use default settings & ensure desktop shortcut is created
+4. Download [Git](https://git-scm.com/) if you don't have it. Use default settings & ensure desktop shortcut is created
 5. Check the end of this page for the final instruction.
 
 ## Mac

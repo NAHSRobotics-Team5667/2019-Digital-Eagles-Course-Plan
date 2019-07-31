@@ -68,8 +68,8 @@ A single valve solenoid is the simplest solenoid you can have. Similarly to the 
 
 When dealing with encoders it is very important that you know what encoder you are dealing with. We should know what the resolution of our encoder is:
 
-* CPR - Counts per Revolution - Found often in Quadature encoders
-* PPR - Pulses per Revolution - Found often in Quadature encoders
+* CPR - Counts per Revolution - Found often in Quadrature encoders
+* PPR - Pulses per Revolution - Found often in Quadrature encoders
 * LPR - Lines per Revolution - Found often in optical encoders. Not reliable and can be inaccurate!
 
 This year we used the default RedLine Encoders which has a CPR value of 1024 CPR. This means that the encoder will count 1024 times before the shaft makes a full rotation. This assumes of course that the shaft is not geared in any way. This means that we can estimate how many times the shaft has turned based on encoder counts.
@@ -85,15 +85,27 @@ Typically we want to stray away from using Ultrasonic sensors because of their i
 
 * `DigitalInput` - Class to read a digital input.
 
+When using Limit Switches we have to use the Digital Input class. In order to get the Limit Switch value we can use the `DigitalInput.get` value.
+
 ## Network Tables
 
 ### Package edu.wpi.first.networktables
 
-* `NetworkTable` A network table that knows its subtable path.
+* `NetworkTable` A network table that knows its suitable path.
 * `NetworkTableEntry` - NetworkTables Entry.
 * `NetworkTableInstance` - NetworkTables Instance.
 
+You generally want to use Network tables when using components that connect using the radio. An example would be the Lime Light. Shuffle Board also transmits data using Network tables. Network tables are like Network "databases" and can be accessed in this manner:
+
+```java
+NetworkTable table = NetworkTableInstance.getDefault().getTable(NETWORKTABLE_NAME);
+NetworkTableEntry entry = table.getEntry(ENTRYNAME);
+double value = entry.getDouble(DEFAULT_VALUE); // The default value is returned if the entry does not have a value
+```
+
 ## Shuffleboard and SmartDashboard
+
+We want to use the Suffleboard or SmartDashboard in order to provide the driver with insight on the current robot status and some sort of feedback. For example, the driver may not be able to see if a piston is extended or not. We can let the driver know by providing a boolean box that lights up green when extended or red when retracted.
 
 ### Package edu.wpi.first.wpilibj.shuffleboard
 
@@ -102,3 +114,5 @@ Typically we want to stray away from using Ultrasonic sensors because of their i
 ### Package edu.wpi.first.wpilibj.smartdashboard
 
 * `SmartDashboard` - The SmartDashboard class is the bridge between robot programs and the SmartDashboard on the laptop.
+
+Visit the [WPI Library Reference](https://first.wpi.edu/FRC/roborio/release/docs/java/index.html) to learn see the functionality that comes with each dash board and how to use it.

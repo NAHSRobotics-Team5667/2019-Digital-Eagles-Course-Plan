@@ -10,7 +10,7 @@ We can use objects to store our methods and data in a single place. Because each
 
 ## Objects vs methods
 
-To understand the difference between objects and methods we must understand what a method is: a procedure or "action" that is activted when the method is called. I will explain this topic in terms of the human body. Think of the human body as an Object. Now why did I choose the human body? The human body has attributes (color of hair, number of arms, color of eyes, etc) and it also has actions it can perform (eat, sleep, shower, etc). When deciding between creating an object or a method think to yourself: Should this have attributes? Is this an action? Does what I am trying to create have features that need to be further specified?
+To understand the difference between objects and methods we must understand what a method is: a procedure or "action" that is activated when the method is called. I will explain this topic in terms of the human body. Think of the human body as an Object. Now why did I choose the human body? The human body has attributes (color of hair, number of arms, color of eyes, etc) and it also has actions it can perform (eat, sleep, shower, etc). When deciding between creating an object or a method think to yourself: Should this have attributes? Is this an action? Does what I am trying to create have features that need to be further specified?
 
 Objects should typically be thought of as a foundation to provide attributes/data and actions. Methods should typically be thought of as actions that act upon or manipulate data when asked to.
 
