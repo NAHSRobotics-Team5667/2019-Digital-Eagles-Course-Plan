@@ -65,7 +65,7 @@ For example, the DriveTrain Subsystem should be named `DriveTrainSubsystem` and 
 
 ## Documentation
 
-Because we are writing our code primarily in Java, it is good practice to document all code using Java Docs. Visual Studio Code has a nice feature in which it can create Java Doc templates and it can be activated by typing `/**`. The reminder of the comment will be auto-completed and you will be prompted with a "Java Docs" tab that you can press `tab` on. This will generate the Java Docs template as long as the method/class has either parameters or a return type. Other wise you will get an empty multi-line comment. This is what Java docs look like:
+Because we are writing our code primarily in Java, it is good practice to document all code using Java Docs. Visual Studio Code has a nice feature in which it can create Java Doc templates and it can be activated by typing `/**`. The remainder of the comment will be auto-completed and you will be prompted with a "Java Docs" tab that you can press `tab` on. This will generate the Java Docs template as long as the method/class has either parameters or a return type. Other wise you will get an empty multi-line comment. This is what Java docs look like:
 
 ```java
 // This code is to be taken as an example
@@ -111,6 +111,6 @@ public class DriveTrainSubsystem {
 }
 ```
 
-As you can see, the Java Docs starts by providing a description of the method/class. This can be seen when hovering over methods/classes in VSCode. These "tool tips" are not only useful when writing your code, but they also help others understand what the method expects and what it returns.
+As you can see, the Java Docs start by providing a description of the method/class. This can be seen when hovering over methods/classes in VSCode. These "tool tips" are not only useful when writing your code, but they also help others understand what the method expects and what it returns.
 
 ## Best tool for the job (time based actions vs feedback loops (closed loops vs open loops) )
