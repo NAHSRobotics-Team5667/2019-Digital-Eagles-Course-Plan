@@ -23,7 +23,7 @@ It is very important that we manually set the camera resolution and frames per s
 
 ## OpenCV
 
-If for some reason we would like to do some image processing on the image, we can use OpenCV on the Camera. The WPI Library comes with the OpenCV library, which allows us to access the library without having to install any extra dependencies. This means that we can perform computer vision code on the RIO. This isn't ideal however because any image processing will be heavy on the RIO and decrease overall performance.
+If for some reason we would like to do some image processing on the image, we can use OpenCV on the Camera. The WPI Library comes with the OpenCV library, which allows us to access the library without having to install any extra dependencies. This means that we can perform computer vision code on the RIO. This isn't ideal however because any image processing will be heavy on the RIO and decrease overall performance. An example of what Image Processing might look like can be found [here](https://github.com/NAHSRobotics-Team5667/Vision-ImageProcessing/blob/master/README.md)(Image Processing for Vision Tracking)
 
 ## Modifying and manipulating the camera feed
 
