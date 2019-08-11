@@ -24,8 +24,8 @@ The WPI Library has provided a PID Subsystem class for classes that incorporate 
 
 ## Commands
 
-Commands are classes that make calls on hardware. You should describe any Robot functionality in this class. Instead you should be calling the behavior you created in a Subsystem. In order to call robot functionality, you should be referencing all of the Subsystems from the Robot class you instantiated.
-DO NOT instantiate the subsystems in the command. All Commands extend from the Command class and generally should have 5 Overridden commands:
+Commands are classes that make calls on hardware. You should not describe any Robot functionality in this class. Instead you should be calling the behavior you created in a Subsystem. In order to call robot functionality, you should be referencing all of the Subsystems from the Robot class you instantiated or through the use of singletons.
+DO NOT instantiate the subsystems in the command! All Commands extend from the Command class and generally should have 5 Overridden commands:
 
 * initialize - Runs before `execute` is called for the first time.
 * execute - Runs every time the `Scheduler` sees it's scheduled to run (Game Loop).

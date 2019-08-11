@@ -32,4 +32,4 @@ We are able to pull each frame from the camera and manipulate it in some shape i
 ## LimeLight functionality
 
 In simple terms, a LimeLight is a camera hooked up to a PI that performs an extensive amount of vision code. We start by connecting the LimeLight to the radio. From there we can access the LimeLight local server that it runs where we can change configurations, tune the LimeLight, and see the actual LimeLight Feed. All of the tracking values that the LimeLight gets are uploaded as `NetworkTableEntry` in a `NetworkTable` called `limelight`.
-The LimeLight feed is also accessible on the SmartDashboard/Shuffleboard as it is streamed an can be easily selected for driver view.
+The LimeLight feed is also accessible on the SmartDashboard/Shuffleboard as it is streamed and can be easily selected for driver view.

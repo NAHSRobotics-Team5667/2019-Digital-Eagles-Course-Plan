@@ -61,7 +61,7 @@ The only things that are allowed to start with capital letters are `Class` names
 
 You always want to define the object you are creating when naming classes. If you are creating a `Subsystem`, make it obvious that the class is a `Subsystem` by adding "Subsystem" at the end of the class name. Same thing with `Commands`.
 
-For example, the DriveTrain Subsystem should be named `DriveTrainSubsystem` and its command should be named `DriveTrainCommand`. By naming our classes like so, we can not only explicitly distinguish between `Subsystems`, `Commands`, and java classes. Most importantly, however, is the fact that if an error arises, we can tell whether it came from the `Command` or `Subsystem` code of the mechanism.
+For example, the DriveTrain Subsystem should be named `DriveTrainSubsystem` and its command should be named `DriveTrainCommand`. By naming our classes like so, we can not only explicitly distinguish between `Subsystems`, `Commands`, and java classes, but also if an error arises, we can tell whether it came from the `Command` or `Subsystem` code of the mechanism.
 
 ## Documentation
 
@@ -103,7 +103,7 @@ public class DriveTrainSubsystem {
      *
      * @param speed - Speed between -1.0 and 1.0
      *
-     * @return Returns the MecanumDrive Instance
+     * @return Returns if the speeds are the same
      */
     public boolean compareSpeed(double speed){
         return this.drive.getSpeed() == speed;
@@ -114,3 +114,5 @@ public class DriveTrainSubsystem {
 As you can see, the Java Docs start by providing a description of the method/class. This can be seen when hovering over methods/classes in VSCode. These "tool tips" are not only useful when writing your code, but they also help others understand what the method expects and what it returns.
 
 ## Best tool for the job (time based actions vs feedback loops (closed loops vs open loops) )
+
+Coming soon..

@@ -5,7 +5,7 @@ In order to understand PID Controllers we must understand what "Open" and "Close
 * Open Control Loop - Runs freely without any sort of feed back (non-feedback system) and acts solely on input. An example of an open loop would be a light switch. When switched on - the light bulb is receiving constant voltage regardless of anything. When off the opposite is true.
 * Closed Control Loop - Runs on a feedback system. An example of a Closed Control Loop would be your A/C when set to auto. Your A/C turns on when it gets too hot and turns off when it gets too cold. The feedback here being the current temperature.
 
-With that, PID Controllers are a form of closed loop controllers. They require some sort of feedback in order to operate. A PID Controller has 3 main parts to it - A proportional, integral, and derivative. By using all 3 of these mathematical components, we can properly create a smooth form of mechanism behavior. Let's use an elevator for this example. When you ride an elevator it always starts off slow and speeds up half way into the ride. At approximately 3/4ths of the ride the elevator beings to slow down so that it reaches its target floor not only smoothly but also accurately. That is essentially what PID does. It allows our mechanisms to not only behave smoothly, but also accurately.
+With that, PID Controllers are a form of closed loop controllers. They require some sort of feedback in order to operate. A PID Controller has 3 main parts to it - A proportional, integral, and derivative. By using all 3 of these mathematical components, we can properly create a smooth form of mechanism behavior. Let's use an elevator for this example. When you ride an elevator it always starts off slow and speeds up half way into the ride. At approximately 3/4ths of the ride the elevator begins to slow down so that it reaches its target floor not only smoothly but also accurately. That is essentially what PID does. It allows our mechanisms to not only behave smoothly, but also accurately.
 
 With PID we always have gain constants for each factor denoted like so: `kP, kI, kD`. These constants will help us calculate the ultimate output that we would like to provide.
 
@@ -25,7 +25,7 @@ Looking at this image we can see that the mechanism is stuck in a never ending o
 
 ## Integral
 
-Ideally when it comes to FRC, we want to stray away from I when we are creating our PID Controllers. The reason for this is because how inaccurate they actually make the mechanism after some time; however, we will discuss that in the next couple of paragraphs. By introducing the I to the controller we now have what is called a PI Controller. The integral is total error multiplied by the `kI` gain. Mathematically, it looks like this:
+Ideally when it comes to FRC, we want to stray away from I when we are creating our PID Controllers. The reason for this is because how inaccurate they actually make the mechanism after some time known as Integral wind up; however, we will discuss that in the next couple of paragraphs. By introducing the I to the controller we now have what is called a PI Controller. The integral is total error multiplied by the `kI` gain. Mathematically, it looks like this:
 
 `(kI × ∑ error)`
 
@@ -40,7 +40,7 @@ public void calculateI(){
 }
 ```
 
-Makes more sense like that in my opinion - Can you see why having an I can be a bad thing? The fact that the I portion is calculated using the total error over time means that the total error will continuously get bigger over time. This means that the I portion of the PID Output will get bigger over time making the output larger and larger as time increases. There are ways to combat this such as resetting the total error after a certain point or capping it at a certain value, but having an I overall makes tuning your PID Controller and getting consistent results a - bleep -. That is why we should stray away from using the I part of a PID Controller unless we absolutely have to. Instead, we should try to implement the D portion of the controller first.
+Makes more sense like that in my opinion - Can you see why having an I can be a bad thing? The fact that the I portion is calculated using the total error over time means that the total error will continuously get bigger over time. This means that the I portion of the PID Output will get bigger over time making the output larger and larger as time increases. This is formally known as "Integral Wind Up", and there are ways to combat this such as resetting the total error after a certain point or capping it at a certain value, but having an I overall makes tuning your PID Controller and getting consistent results a - bleep -. That is why we should stray away from using the I part of a PID Controller unless we absolutely have to. Instead, we should try to implement the D portion of the controller first.
 
 ## Derivative
 
@@ -71,7 +71,7 @@ When using PID Controllers we typically want a Feed Forward value implemented to
 
 ## Implementing PID Controllers into Subsystems
 
-When implementing a PID Controller you can either implement it into the Subsystem's command or the Subsystem itself. It truthfully doesn't matter as long as the PID Controller is called appropriately. With the WPI Library, they provide a `PIDSubsystem` class; however, the class is going to be changed in the near future, which could cause certain code to potentially break. You can, however, by creating your own PID Controller class. The WPI Library PIDSubsystem class also isn't liked very much in the community and teams often prefer to create their own basic PID Controller class.
+When implementing a PID Controller you can either implement it into the Subsystem's command or the Subsystem itself. It truthfully doesn't matter as long as the PID Controller is called appropriately. With the WPI Library, they provide a `PIDSubsystem` class; however, the class is going to be changed in the near future, which could cause certain code to potentially break. You can, however, implement PID Controllers by creating your own PID Controller class. The WPI Library PIDSubsystem class also isn't liked very much in the community and teams often prefer to create their own basic PID Controller class. You can find ours [here](https://github.com/NAHSRobotics-Team5667/FRC_2019/blob/master/src/main/java/frc/robot/utils/PIDFController.java).
 
 ## PID Gain Tuning
 
@@ -81,7 +81,7 @@ Take a look at this graph:
 
 By looking at this graph we can see 3 states that our PID Controller can be in. An overdamped state, underdamped state, or critically damped state.
 
-* Overdamped - The gains are too strong causing the PID curve too long to reach the target. This means that we are apply output for longer periods of time and overall just slow.
+* Overdamped - The gains are too strong causing the PID curve too long to reach the target. This means that we are applying output for longer periods of time and overall just slow.
 * Underdamped - The gains are too low causing the PID curve to overshoot the target and potentially oscillate.
 * Critically damped - The gains cause the PID curve to take longer than desired to reach the target but ultimately has low to no oscillations.
 
