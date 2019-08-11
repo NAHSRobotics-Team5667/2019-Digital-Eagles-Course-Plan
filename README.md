@@ -52,6 +52,7 @@
     * Command Groups
     * Instant Commands
     * Timed Commands
+  * Static References vs Singletons
 
 ## [WPI Lib Programming 101](06_WPILib-Programming-101)
 
@@ -69,7 +70,7 @@
 
 * USB Cameras
 * OpenCV
-* Modifiying and manipulating the camera feed
+* Modifying and manipulating the camera feed
 * LimeLight functionality
 
 ## [PID Basics](08_PID-Basics)

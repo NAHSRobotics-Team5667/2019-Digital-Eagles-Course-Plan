@@ -44,3 +44,35 @@ An Instant command runs immediately after the robot has been initialized. This c
 ### Timed Commands
 
 A `Timed Command` requires a double when instantiating, which represents the amount of time the command "will be alive for". Other than that, the functionality is identical to that of a regular command.
+
+## Static References vs Singletons
+
+Static references to `Subsystems` are typically instantiated in the `Robot.java` class. There is also the possiblity of creating "Singletons" which store their instance statically:
+
+```java
+public class Singleton {
+
+    private static Singleton m_Instance;
+
+    /**
+     * Singleton example
+    */
+    public Singleton(){
+    }
+
+    /**
+     * Get the Singleton instance
+     *
+     * @return the Singleton instance
+    */
+    public static Singleton getInstance(){
+        if(m_Instance == null){
+            m_Instance = new Singleton();
+        }
+
+        return m_Instance;
+    }
+}
+```
+
+Singletons are never declared anywhere, and instead accessed through their `getInstance()` methods, which instantiate the class if not yet instantiated. I do not know why some teams prefer to do this or if there are any functional benefits to doing this. I simply use it as a stylistic choice. If I feel that a subsystem is more of a "tool" rather than an actual mechanism, I will create a singleton for it. For example, our [LimeLight Subsystem](https://github.com/NAHSRobotics-Team5667/FRC_2019/blob/master/src/main/java/frc/robot/subsystems/vision/LimeLightSubsystem.java) code is written as a singleton.
