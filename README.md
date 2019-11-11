@@ -1,5 +1,7 @@
 # The Digital Eagles Programming Course Plan
 
+[Playlist of tutorials](https://www.youtube.com/playlist?list=PLKyq050F-rZAf9qX4MQoVhpTMWQMbIol6)
+
 ## [Setting Up Your Environment](00_Installation)
 
 * Install Visual Studio Code
@@ -11,6 +13,8 @@
 
 ## [GitHub Basics](01_Github-Basics)
 
+[Tutorial Video](https://youtu.be/F-DrgSL5Ggs)
+
 * Creating repositories
 * Stage, commit, and push code
 * VIM basics
@@ -20,12 +24,16 @@
 
 ## [Visual Studio Code Basics](02_VSCode-Basics)
 
+[Tutorial Video](https://youtu.be/jJ-OiaOH5VA)
+
 * How to access command palette
 * How to create a new robot project
 * How to build a robot project
 * How to deploy a robot project
 
 ## [Object Oriented Programming 101](03_OOP-101)
+
+[Tutorial Video](https://youtu.be/7Irl89teMYM)
 
 * What are objects? How are they used in Java?
 * How can we efficiently use objects?
