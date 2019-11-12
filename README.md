@@ -42,6 +42,8 @@
 
 ## [Java Programming 101](04_Java-Programming-101)
 
+[Tutorial Video](https://youtu.be/WPvGqX-TXP0)
+
 * Data types
 * If/else statements
 * Methods
