@@ -102,3 +102,5 @@
 * PIDF Tuning
 
 ## [Assignments / Practice](Assignments)
+
+Practice the skills you have learned by tackling challenges specific to each lesson
