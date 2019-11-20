@@ -7,4 +7,4 @@
 
 ### DO THIS FOR EACH ASSIGNMENT YOU COMPLETE
 
-You can have one repository for each assignment and a folder for every assignment if you wish.
+NOTE: You can have one repository for all assignments and a folder for every assignment if you wish.
