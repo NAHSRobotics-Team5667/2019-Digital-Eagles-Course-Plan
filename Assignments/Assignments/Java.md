@@ -20,4 +20,5 @@
 
 * Create a constructor
 * Camel casing
-* Appropriate variable types
+* Appropriate variable visibility and types
+* Appropriate method visibility and return types
