@@ -1,6 +1,6 @@
 # The Digital Eagles Programming Course Plan
 
-[Playlist of tutorials](https://www.youtube.com/playlist?list=PLKyq050F-rZAf9qX4MQoVhpTMWQMbIol6)
+[Playlist of Digital Eagles created tutorials](https://www.youtube.com/playlist?list=PLKyq050F-rZAf9qX4MQoVhpTMWQMbIol6)
 
 ## [Setting Up Your Environment](00_Installation)
 
