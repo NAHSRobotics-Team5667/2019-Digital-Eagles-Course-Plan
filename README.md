@@ -52,6 +52,8 @@
 
 ## [Command Based Programming 101](05_Command-Based-Programming-101)
 
+[Tutorial Video](https://youtu.be/4Xg6RB6Kq8M)
+
 * Project/Robot Structure
   * Robot.java
   * RobotMap.java
@@ -66,6 +68,8 @@
 
 ## [WPI Lib Programming 101](06_WPILib-Programming-101)
 
+[Tutorial Video](https://youtu.be/WRZLk4w-vQs)
+
 * Field Connections
 * Drive Trains
 * Motors
@@ -78,12 +82,16 @@
 
 ## [Vision Basics](07_Vision-Basics)
 
+[Tutorial Video](https://youtu.be/w7nEdmZIZLI)
+
 * USB Cameras
 * OpenCV
 * Modifying and manipulating the camera feed
 * LimeLight functionality
 
 ## [PID Basics](08_PID-Basics)
+
+[Tutorial Video](https://youtu.be/XMeX2KRPPD4)
 
 * Proportional
 * Integral
