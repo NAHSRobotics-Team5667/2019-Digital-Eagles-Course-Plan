@@ -113,6 +113,6 @@
 
 Practice the skills you have learned by tackling challenges specific to each lesson
 
-## [Test Free Response](TestFR)
+## [Test Free Response](TestFR/Math.java)
 
 The ideal response to the FRQ on the test

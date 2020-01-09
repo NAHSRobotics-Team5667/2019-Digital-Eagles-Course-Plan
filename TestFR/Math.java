@@ -3,7 +3,7 @@ public class Math {
 	/**
 	 * Method Declaration has:
 	 * 	Return type
-	 * 	Is static for verbosity (Don't need to create Math class)
+	 * 	Is static to reduce verbosity (Don't need to create Math class)
 	 *	Parameters for dynamic use
 	 *	Return type = intended return type
 	 */
@@ -14,7 +14,7 @@ public class Math {
 	/**
 	 * Method Declaration has:
 	 * 	Return type
-	 * 	Is static for verbosity (Don't need to create Math class)
+	 * 	Is static to reduce verbosity (Don't need to create Math class)
 	 *	Parameters for dynamic use
 	 *	Return type = intended return type
 	 */
@@ -25,7 +25,7 @@ public class Math {
 	/**
 	 * Method Declaration has:
 	 * 	Return type
-	 * 	Is static for verbosity (Don't need to create Math class)
+	 * 	Is static to reduce verbosity (Don't need to create Math class)
 	 *	Parameters for dynamic use
 	 *	Return type = intended return type
 	 */
