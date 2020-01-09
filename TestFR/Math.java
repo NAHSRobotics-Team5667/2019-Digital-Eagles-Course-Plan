@@ -18,7 +18,7 @@ public class Math {
 	 *	Parameters for dynamic use
 	 *	Return type = intended return type
 	 */
-	public static square(int a) {
+	public static int square(int a) {
 		return a * a;
 	}
 
@@ -29,7 +29,7 @@ public class Math {
 	 *	Parameters for dynamic use
 	 *	Return type = intended return type
 	 */
-	public static mult(int a, int b){
+	public static int mult(int a, int b){
 		return a * b;
 	}
 
